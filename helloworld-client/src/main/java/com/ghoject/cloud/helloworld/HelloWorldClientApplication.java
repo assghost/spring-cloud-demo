@@ -1,4 +1,4 @@
-package com.ghoject.cloud;
+package com.ghoject.cloud.helloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

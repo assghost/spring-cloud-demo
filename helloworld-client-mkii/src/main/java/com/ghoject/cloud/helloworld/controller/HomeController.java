@@ -11,9 +11,13 @@ public class HomeController {
     @Value("${server.port}")
     private String serverPort;
 
+    @Value("${datasource.name}")
+    private String dataSource;
+
     @RequestMapping("")
     public String getHome() {
 
-        return String.format("<h2>Hello World from %s</h2>",serverPort);
+        return String.format("<h2>Hello World from %s, dataSource : %s</h2>"
+                ,serverPort,dataSource);
     }
 }

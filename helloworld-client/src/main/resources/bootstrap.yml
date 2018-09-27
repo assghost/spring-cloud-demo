@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      profile: @profiles.active@
+      uri: http://127.0.0.1:8902
