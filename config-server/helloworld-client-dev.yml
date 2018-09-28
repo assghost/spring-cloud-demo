@@ -1,10 +1,16 @@
 config:
-    datasource:
-        - {
+    datasources:
+        mdc: {
             name: mdcdev,
-            pwd: mdcdev
+            pwd: mdcdev,
+            url: mdcdev
         }
-        - {
+        msp: {
             name: mspdev,
             pwd: mspdev
-        }        
+        }
+    email: assghost@163.com
+    dbstatus:
+        isMDCOpen : Y
+        isMSPOpen : N
+    

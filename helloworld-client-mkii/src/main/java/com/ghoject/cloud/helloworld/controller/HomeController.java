@@ -1,6 +1,7 @@
 package com.ghoject.cloud.helloworld.controller;
 
-import com.ghoject.cloud.helloworld.config.DataSourceConfiguration;
+import com.ghoject.cloud.helloworld.bean.DBStatus;
+import com.ghoject.cloud.helloworld.bean.DataSourceManger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -15,18 +16,23 @@ public class HomeController {
     @Value("${server.port}")
     private String serverPort;
 
-    //@Value("${config.datasource.name}")
-    private String dataSourceName;
+    @Value("${config.email}")
+    public String email;
 
     @Autowired
-    private DataSourceConfiguration dataSourceConfiguration;
+    private DataSourceManger dataSourceManger;
+
+    @Autowired
+    private DBStatus dbStatus;
 
     @RequestMapping("")
     public String getHome() {
-        System.out.println("dataSource name : " + dataSourceName);
-        dataSourceConfiguration.loadConfig();
+
+        System.out.println("isMDCOpen : " + dbStatus.getIsMDCOpen());
+        System.out.println("email : " + email);
+        System.out.println("dataSources : " + dataSourceManger.getDataSources().get("mdc").getName());
 
         return String.format("<h2>Hello World from %s, dataSource : %s</h2>"
-                ,serverPort,dataSourceName);
+                ,serverPort,dataSourceManger.getDataSources().get("mdc").getName());
     }
 }
