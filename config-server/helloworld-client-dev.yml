@@ -1,2 +1,10 @@
-datasource:
-    name : mdcdev
+config:
+    datasource:
+        - {
+            name: mdcdev,
+            pwd: mdcdev
+        }
+        - {
+            name: mspdev,
+            pwd: mspdev
+        }        

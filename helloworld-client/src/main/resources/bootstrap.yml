@@ -1,5 +1,5 @@
 spring:
   cloud:
     config:
-      profile: @profiles.active@
+      profile: ${spring.profiles.active}
       uri: http://127.0.0.1:8902
