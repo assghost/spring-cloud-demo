@@ -3,5 +3,16 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/helloworld-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/helloworld-client-mkii/pom.xml" />
+        <option value="$PROJECT_DIR$/helloworld-client/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" />
 </project>
