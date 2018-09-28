@@ -1,4 +1,4 @@
-package com.ghoject.cloud.ribbon.client;
+package com.ghoject.cloud.ribbon.server;
 
 import com.ghoject.cloud.ribbon.config.RibbonConfiguration;
 import org.springframework.boot.SpringApplication;

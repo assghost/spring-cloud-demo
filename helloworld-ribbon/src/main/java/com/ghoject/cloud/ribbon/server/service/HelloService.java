@@ -1,4 +1,4 @@
-package com.ghoject.cloud.ribbon.client.service;
+package com.ghoject.cloud.ribbon.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
