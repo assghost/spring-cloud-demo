@@ -84,7 +84,7 @@
             <artifactId>feign-httpclient</artifactId>
         </dependency>
 
-        <!-- hystrix command -->
+        <!-- hystrix（熔断） -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

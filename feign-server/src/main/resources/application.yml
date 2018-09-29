@@ -26,3 +26,9 @@ feign:
       HELLOWORLD-CLIENT:
         connectTimeout: 5000
         readTimeout: 30000
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        requestVolumeThreshold: 1

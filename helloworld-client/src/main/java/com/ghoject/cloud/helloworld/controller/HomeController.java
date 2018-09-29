@@ -31,6 +31,7 @@ public class HomeController {
         System.out.println("isMDCOpen : " + dbStatus.getIsMDCOpen());
         System.out.println("email : " + email);
         System.out.println("dataSources : " + dataSourceManger.getDataSources().get("mdc").getName());
+        //System.out.println(1 / 0);
 
         return String.format("<h2>Hello World from %s, dataSource : %s</h2>"
                 ,serverPort,dataSourceManger.getDataSources().get("mdc").getName());
