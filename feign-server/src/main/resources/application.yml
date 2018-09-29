@@ -1,0 +1,17 @@
+server:
+  port: 8903
+
+spring:
+  application:
+    name: feign-server
+  profiles:
+    active: ribbon
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+feign:
+  httpclient:
+    enabled: true
