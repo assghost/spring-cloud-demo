@@ -1,6 +1,10 @@
 server:
   port: 8903
 
+logging:
+  level:
+    root: info
+
 spring:
   application:
     name: feign-server
@@ -15,3 +19,10 @@ eureka:
 feign:
   httpclient:
     enabled: true
+  hystrix:
+    enabled: true
+  client:
+    config:
+      HELLOWORLD-CLIENT:
+        connectTimeout: 5000
+        readTimeout: 30000
