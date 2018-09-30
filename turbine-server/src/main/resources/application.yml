@@ -1,0 +1,22 @@
+server:
+  port: 8904
+
+logging:
+  level:
+    root: info
+
+spring:
+  application:
+    name: turbine-server
+  profiles:
+    active: @profiles.active@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+turbine:
+  instanceUrlSuffix: /actuator/hystrix.stream
+  appConfig: feign-server
+  clusterNameExpression: "'default'"

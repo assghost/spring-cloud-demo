@@ -1,4 +1,4 @@
-package com.ghoject.cloud.feign.client.service;
+package com.ghoject.cloud.feign.client.config;
 
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.CloseableHttpClient;
