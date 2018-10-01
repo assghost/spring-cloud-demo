@@ -2,6 +2,7 @@ package com.ghoject.cloud.helloworld.controller;
 
 import com.ghoject.cloud.helloworld.bean.DBStatus;
 import com.ghoject.cloud.helloworld.bean.DataSourceManger;
+import com.ghoject.cloud.helloworld.dao.RedisDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -25,6 +26,9 @@ public class HomeController {
     @Autowired
     private DBStatus dbStatus;
 
+    @Autowired
+    private RedisDao redisDao;
+
     @RequestMapping("")
     public String getHome() {
 
@@ -32,6 +36,11 @@ public class HomeController {
         System.out.println("email : " + email);
         System.out.println("dataSources : " + dataSourceManger.getDataSources().get("mdc").getName());
         //System.out.println(1 / 0);
+
+        DBStatus o = redisDao.getValue("second");
+        System.out.println(o.getIsMSPOpen());
+
+        redisDao.putValue("second",dbStatus);
 
         return String.format("<h2>Hello World from %s, dataSource : %s</h2>"
                 ,serverPort,dataSourceManger.getDataSources().get("mdc").getName());

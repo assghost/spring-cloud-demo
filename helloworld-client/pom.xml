@@ -77,10 +77,21 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
-        <!--监控程序在运行时状态,可以刷新配置信息-->
+        <!--监控程序在运行时状态,可以刷新spring config配置信息-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- redis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <!-- spring boot test-->
