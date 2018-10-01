@@ -1,6 +1,10 @@
 server:
   port: 8901
 
+logging:
+  level:
+    root: debug
+
 spring:
   application:
     name: ribbon-server
