@@ -18,7 +18,7 @@ public class DataSourceManger {
         this.dataSources = dataSources;
     }
 
-    static class DataSource {
+    public static class DataSource {
         private String name;
 
         private String pwd;
