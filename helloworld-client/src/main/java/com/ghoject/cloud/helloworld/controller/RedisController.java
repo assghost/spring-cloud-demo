@@ -33,6 +33,7 @@ public class RedisController {
 
     @RequestMapping("getExpireValue")
     public String getExpireValue() {
+        System.out.println(expireKey);
         String version = redisDao.getValue(expireKey);
         System.out.println(version);
         return version;

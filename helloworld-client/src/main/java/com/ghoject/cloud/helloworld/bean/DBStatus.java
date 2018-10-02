@@ -1,5 +1,10 @@
 package com.ghoject.cloud.helloworld.bean;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties(prefix = "config.dbstatus")
 public class DBStatus {
     private String isMDCOpen;
 

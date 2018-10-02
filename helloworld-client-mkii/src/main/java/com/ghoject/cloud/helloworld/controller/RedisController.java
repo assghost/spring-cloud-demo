@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class RedisController {
 
-    @Value("${config.redis.expire-key}:expire-key")
+    @Value("${config.redis.expire-key:expire-key}")
     private String expireKey;
 
     @Autowired
@@ -33,6 +33,7 @@ public class RedisController {
 
     @RequestMapping("getExpireValue")
     public String getExpireValue() {
+        System.out.println(expireKey);
         String version = redisDao.getValue(expireKey);
         System.out.println(version);
         return version;

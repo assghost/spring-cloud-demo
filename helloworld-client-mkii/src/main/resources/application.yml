@@ -15,7 +15,6 @@ spring:
         max-idle: 10 # 连接池中的最大空闲连接
         max-wait: 10s # 连接池最大阻塞等待时间（使用负值表示没有限制）
         min-idle: 5 # 连接池中的最小空闲连接
-    timeout: 10s # 连接超时时间
 
 eureka:
   client:
