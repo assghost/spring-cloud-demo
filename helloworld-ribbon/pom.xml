@@ -83,12 +83,6 @@
             <artifactId>httpclient</artifactId>
         </dependency>
 
-        <!-- hystrix command -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
-
         <!-- spring boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

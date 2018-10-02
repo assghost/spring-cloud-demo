@@ -12,5 +12,6 @@ config:
     email: assghost@163.com
     dbstatus:
         isMDCOpen : Y
-        isMSPOpen : N
-    
+        isMSPOpen : Y
+    redis: 
+        expire-key: cache-version

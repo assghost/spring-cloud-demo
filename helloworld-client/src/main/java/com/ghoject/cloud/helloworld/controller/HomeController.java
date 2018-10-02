@@ -40,8 +40,6 @@ public class HomeController {
         DBStatus o = redisDao.getValue("second");
         System.out.println(o.getIsMSPOpen());
 
-        redisDao.putValue("second",dbStatus);
-
         return String.format("<h2>Hello World from %s, dataSource : %s</h2>"
                 ,serverPort,dataSourceManger.getDataSources().get("mdc").getName());
     }
