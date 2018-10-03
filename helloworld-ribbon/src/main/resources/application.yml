@@ -10,6 +10,12 @@ spring:
     name: ribbon-server
   profiles:
     active: @profiles.active@
+  zipkin:
+    enabled: true
+    base-url: http://ZIPKIN-SERVER
+  sleuth:
+    sampler:
+      probability: 1.0
 
 eureka:
   client:

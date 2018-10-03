@@ -15,6 +15,12 @@ spring:
         max-idle: 10 # 连接池中的最大空闲连接
         max-wait: 10s # 连接池最大阻塞等待时间（使用负值表示没有限制）
         min-idle: 5 # 连接池中的最小空闲连接
+  zipkin:
+    enabled: true
+    base-url: http://ZIPKIN-SERVER
+  sleuth:
+    sampler:
+      probability: 1.0 #日志采样概率0-1
 
 eureka:
   client:
