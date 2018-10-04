@@ -2,6 +2,7 @@ package com.ghoject.cloud.helloworld.controller;
 
 import com.ghoject.cloud.helloworld.bean.DBStatus;
 import com.ghoject.cloud.helloworld.bean.DataSourceManger;
+import com.ghoject.cloud.helloworld.bean.ZipkinLogger;
 import com.ghoject.cloud.helloworld.dao.RedisDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,6 +30,8 @@ public class HomeController {
     @Autowired
     private RedisDao redisDao;
 
+    private ZipkinLogger logger = new ZipkinLogger(this.getClass());
+
     @RequestMapping("")
     public String getHome() {
 
@@ -36,11 +39,12 @@ public class HomeController {
         System.out.println("email : " + email);
         System.out.println("dataSources : " + dataSourceManger.getDataSources().get("mdc").getName());
         //System.out.println(1 / 0);
+        logger.debug("customize trace message ");
+
+
 
         DBStatus o = redisDao.getValue("second");
         System.out.println(o.getIsMSPOpen());
-
-        redisDao.putValue("second",dbStatus);
 
         return String.format("<h2>Hello World from %s, dataSource : %s</h2>"
                 ,serverPort,dataSourceManger.getDataSources().get("mdc").getName());
